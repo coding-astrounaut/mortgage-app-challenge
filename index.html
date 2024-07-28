@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="red" !important;>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Mortgage repayment calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="master">
+      <div class="leftSide">
+        <div class="title">
+          <h2>Mortgage calculator</h2>
+          <button id="clear-button" onclick="clearAll()">Clear All</button>
+        </div>
+
+        <div class="mAmount">
+          <p>Mortgage Amount</p>
+          <div class="numericInput">
+            <div class="inputIcon">£</div>
+            <input type="text" inputmode="numeric" id="mortgageAmount" />
+          </div>
+          <p class="errorMessage e1">This field is required</p>
+        </div>
+        <div class="otherinputs">
+          <div class="mTerm">
+            <p>Mortgage Term</p>
+            <div class="numericInput rightInput">
+              <div class="inputIcon">years</div>
+              <input type="text" inputmode="numeric" id="mortgageTerm" />
+            </div>
+            <p class="errorMessage e2">This field is required</p>
+          </div>
+
+          <div class="mRate">
+            <p>Interest Rate</p>
+            <div class="numericInput rightInput">
+              <div class="inputIcon">%</div>
+              <input type="text" inputmode="numeric" id="mortgageInterest" />
+            </div>
+            <p class="errorMessage e3">This field is required</p>
+          </div>
+        </div>
+
+        <div>
+          <p>Mortgage Type</p>
+          <button class="checkBox c1" onclick="checkbox1()">
+            <div id="checkindicate1" class="check">
+              <div class="innercheck1"></div>
+            </div>
+            <h3>Repayment</h3>
+          </button>
+          <button class="checkBox c2" onclick="checkbox2()">
+            <div id="checkindicate2" class="check">
+              <div class="innercheck2"></div>
+            </div>
+            <h3>Interest Only</h3>
+          </button>
+          <p class="errorMessage e4">This field is required</p>
+        </div>
+
+        <div>
+          <button onclick="output()" id="calculate-button">
+            <div id="gap">
+              <img
+                src="./assets/images/icon-calculator.svg"
+                alt="calculator icon"
+              />
+            </div>
+            <div><h3>calculate Repayments</h3></div>
+          </button>
+        </div>
+      </div>
+      <div class="rightSide">
+        <div class="emptyResult">
+          <img src="/assets/images/illustration-empty.svg" alt="illustration" />
+          <h3 id="rightsideh3">Results shown here</h3>
+          <p>
+            Complete the form and click "calculate Repayments" to see what your
+            monthly repayments would be.
+          </p>
+        </div>
+        <div class="results">
+          <h2>Your results</h2>
+          <p>
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click "calculate
+            repayments" again.
+          </p>
+          <div class="results-grid">
+            <div class="green-highlight"></div>
+            <div class="resulting">
+              <div class="resulting-content">
+                <p>Your monthly repayments</p>
+                <h1 id="monthlyrepay">£123,123</h1>
+                <hr />
+                <p>Total you'll repay over the term</p>
+                <h2 id="totalrepay">£123,123</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

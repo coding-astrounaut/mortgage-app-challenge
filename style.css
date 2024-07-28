@@ -1,0 +1,306 @@
+/* STYLES*/
+/*----------------------------------------------------------------*/
+/*                        SHARED CSS STYLES                       */
+/*----------------------------------------------------------------*/
+
+html {
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  color: #14303f;
+  font-weight: 500;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+hr {
+  border: 1px solid #324753;
+  margin-bottom: 15px;
+}
+
+/*----------------------------------------------------------------*/
+/*                        LAYOUT CSS STYLES                       */
+/*----------------------------------------------------------------*/
+
+.leftSide {
+  padding: 45px 35px;
+}
+.leftSide > * {
+  padding-bottom: 20px;
+}
+/*-----------------------------------------------------------------*/
+/*                         STYLE CSS STYLES                        */
+/*-----------------------------------------------------------------*/
+
+/*LEFT SIDE SYTLES*/
+
+.leftSide h2,
+h3,
+h4 {
+  color: #2b4452;
+  letter-spacing: none;
+}
+.leftSide p {
+  color: hsl(200, 26%, 54%);
+  font-weight: 500;
+}
+
+#clear-button {
+  background-color: white;
+  color: hsl(200, 24%, 40%);
+  text-decoration: underline;
+  font-size: 1.05rem;
+}
+#clear-button:hover {
+  cursor: pointer;
+  color: #14303f;
+}
+
+.title h2 {
+  margin-bottom: 10px;
+}
+.numericInput {
+  border: 1.5px solid hsl(200, 26%, 54%);
+  border-radius: 5px;
+  display: flex;
+  overflow: hidden;
+  margin-top: 10px;
+  color: hsl(200, 24%, 40%);
+  overflow: hidden;
+}
+.inputIcon {
+  padding: 12px 14px;
+  font-weight: 700;
+  background-color: hsl(202, 86%, 94%);
+}
+.rightInput {
+  flex-direction: row-reverse;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #040e17;
+  box-sizing: border-box;
+  outline: none; /* Remove default focus outline */
+  flex: 1; /* Allow input to grow */
+}
+
+.mRate {
+  padding-top: 20px;
+}
+.checkBox {
+  display: flex;
+  border: 1.5px solid hsl(200, 26%, 54%);
+  border-radius: 5px;
+  padding: 13px;
+  margin-top: 10px;
+  align-items: center;
+  font-weight: 800;
+  width: 100%;
+  background-color: white;
+}
+
+.check {
+  border: 2px solid hsl(200, 26%, 54%);
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 20px;
+  padding: 2px;
+}
+.checkBox:hover {
+  border: 1.5px solid hsl(61, 70%, 52%);
+  cursor: pointer;
+}
+
+.innercheck1,
+.innercheck2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/*CALCULATE BUTTON SYTLES*/
+
+#calculate-button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 30px; /* Ensure this value is set in px or % */
+  background-color: hsl(61, 70%, 52%);
+  font-size: 100%;
+}
+#gap {
+  margin-right: 15px;
+}
+#calculate-button:active {
+  background-color: hsl(51, 60%, 42%);
+}
+
+/*RIGHT SIDE SYTLES*/
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(202, 55%, 16%);
+  justify-content: center;
+  align-content: center;
+  padding: 35px;
+  text-align: center;
+  color: white;
+}
+.rightSide h2 {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+}
+#rightsideh3 {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+}
+.rightSide p {
+  font-weight: 500;
+  color: hsl(200, 26%, 54%);
+  padding-bottom: 15px;
+}
+
+/*RIGHT SIDE COMPLETED SYTLES*/
+
+.results {
+  padding: 15px 0px;
+  text-align: left;
+  display: none;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-rows: 4px 1fr;
+  grid-template-columns: 1fr;
+  border-radius: 5px; /* Apply border-radius here */
+  overflow: hidden;
+}
+
+.green-highlight {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: hsl(61, 70%, 52%);
+  z-index: 1;
+}
+.resulting {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  overflow: hidden; /* Ensure overflow is hidden if necessary */
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.resulting-content {
+  background-color: #0f2430;
+  padding: 15px 15px; /* Add padding if needed */
+}
+
+.resulting-content p {
+  padding-bottom: 5px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  padding-bottom: 15px;
+  color: hsl(61, 70%, 52%);
+}
+.numericInput:hover {
+  border: #0f2430 solid 1.5px;
+}
+
+/*MAIN CONTAINER SYTLES*/
+.master {
+  max-width: 950px;
+  background-color: white;
+  width: 100%;
+  height: auto;
+}
+
+.errorMessage {
+  padding: 10px 0px;
+  color: #d5392f !important;
+  display: none;
+}
+
+/*----------------------------------------------------------------*/
+/*                      BREAKPOINT CSS STYLES                     */
+/*----------------------------------------------------------------*/
+
+@media (min-width: 570px) {
+  .otherinputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    gap: 20px; /* Space between the columns */
+    align-content: center;
+    justify-content: center;
+  }
+
+  /* Child elements for grid layout */
+  .mTerm {
+    grid-column: 1; /* First column */
+  }
+
+  .mRate {
+    grid-column: 2; /* Second column */
+    padding: 0px;
+  }
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+}
+
+@media (min-width: 819px) {
+  .master {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 6px 10px 37px -3px rgba(0, 0, 0, 0.3);
+  }
+  body {
+    background-color: #e4f4fc;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default body margin */
+  }
+
+  .rightSide {
+    border-bottom-left-radius: 80px;
+  }
+  #calculate-button {
+    width: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .rightSide h1 {
+    font-size: 3rem;
+  }
+}
